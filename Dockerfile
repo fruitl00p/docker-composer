@@ -3,7 +3,7 @@
 # A simple container for running one-off composer commands
 #
 ###
-FROM php:cli
+FROM php:5.5-cli
 MAINTAINER Kingsquare <docker@kingsquare.nl>
 
 # Set composer home
