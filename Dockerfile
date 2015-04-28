@@ -12,7 +12,8 @@ WORKDIR /app
 ENV COMPOSER_HOME /root/composer
 
 # Install dependencies and perform cleanup
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+RUN DEBIAN_FRONTEND=noninteractive && \
+	apt-get update && \
 	apt-get install -qy --no-install-recommends zlib1g-dev libmcrypt-dev git && \
 	apt-get autoremove -yq --purge && \
 	rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* && \
